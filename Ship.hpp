@@ -11,24 +11,28 @@ class Ship {
 		unsigned int 	luck;
 		unsigned int	speed;
 		int 			level;
+		bool 			isGod;
+		bool			isInvisible;
+		bool			isCursed;
+		bool			isPoisened;
 	
 	public:
-		Ship();
-		Ship(const std::string &name);
+		Ship(const unsigned int power, const unsigned int defence);
+		Ship(const std::string &name, const unsigned int power, const unsigned int defence);
 		bool 	operator>(const Ship &other);
 		bool 	operator<(const Ship &other);
 		~Ship();
 
 		virtual void	levelUp(int amount) = 0;
 		void			getDamage(const Ship &other);
-		void 			attack(const Ship &other);
-		void 			deffend(const Ship &other);
+		void 			attack(Ship &other);
 		void 			healthUp(int amount);
 		void 			powerUp(int amount);
 		void			speedUp(int amount);
-		void			getLucky(int amount, int time);
-		void 			getInvisible(int time);
-		void			godMode(int time);
-		void			getCursed(int time);
-		void			getPoisened(int time, int ammount);
+		void			getLucky(int amount);
+		void 			getInvisible();
+		void			godMode();
+		void			getCursed();
+		void			getPoisened(int amount);
+		void			getDestroyed(void);
 };
