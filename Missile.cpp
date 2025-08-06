@@ -18,6 +18,6 @@ sf::RectangleShape	&Missile::shot() {
 	return (missileShape);
 }
 
-std::string &Missile::getShooter() const {
+std::string Missile::getShooter() const {
 	return (shooterName);
 }

@@ -37,8 +37,8 @@ void	Player::levelUp(int amount) {
 
 void	Player::drawPlayer() {
 	window.draw(this->playerImage);
-	if (missiles.size()) {
-		window.draw(missiles[0].shot());
-		std::cout << "here! " << *(missiles[0].getShooter()) << std::endl;
-	}
+	// if (missiles.size()) {
+	// 	window.draw(missiles[0].shot());
+	// 	std::cout << "here! " << missiles[0].getShooter() << std::endl;
+	// }
 }

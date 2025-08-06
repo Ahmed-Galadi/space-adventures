@@ -48,6 +48,7 @@ int main() {
 			bgAbsPos = BGABSPOS;
 		window.draw(img);
 		p.drawPlayer();
+		window.draw((p.missiles[0]).shot());
 		// p.
 		window.display();
 	}

@@ -20,5 +20,5 @@ class Missile {
 		~Missile();
 
 		sf::RectangleShape	&shot();
-		std::string &getShooter() const;
+		std::string getShooter() const;
 };
